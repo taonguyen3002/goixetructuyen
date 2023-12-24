@@ -73,12 +73,16 @@
     margin-bottom: 50px;
     position: relative;
     width: 100%;
-    padding-top: 66.7%;
+    padding-top: 50%;
     border-radius: 30px 0 30px 0;
-    background: #ccc;
+    background: #13d664c0;
+    @include abstracts.screen(md) {
+      padding-top: 68%;
+    }
   }
   &__img {
     width: 100%;
+    object-fit: cover;
     height: 100%;
     position: absolute;
     top: 0;
@@ -86,12 +90,11 @@
     border-radius: 30px 0 30px 0;
   }
   &__title {
-    margin-top: 30px;
+    line-height: 1.5;
+    margin: 30px 0;
     font-weight: 500;
     font-size: 3rem;
     color: #ed1d26;
-
-    margin-bottom: 30px;
   }
   &__list {
     margin-top: 30px;
@@ -161,5 +164,19 @@
         border-color: transparent transparent black black;
       }
     }
+  }
+  // post express
+  &__wrap {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    gap: 30px;
+    margin-top: 30px;
+    border-bottom: 1.5px solid #ccc;
+  }
+  &__wrap-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
   }
 }
