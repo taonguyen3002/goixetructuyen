@@ -76,9 +76,6 @@
     padding-top: 50%;
     border-radius: 30px 0 30px 0;
     background: #13d664c0;
-    @include abstracts.screen(md) {
-      padding-top: 68%;
-    }
   }
   &__img {
     width: 100%;
@@ -90,11 +87,12 @@
     border-radius: 30px 0 30px 0;
   }
   &__title {
-    line-height: 1.5;
-    margin: 30px 0;
+    margin-top: 30px;
     font-weight: 500;
     font-size: 3rem;
     color: #ed1d26;
+
+    margin-bottom: 30px;
   }
   &__list {
     margin-top: 30px;
@@ -164,19 +162,5 @@
         border-color: transparent transparent black black;
       }
     }
-  }
-  // post express
-  &__wrap {
-    display: flex;
-    align-items: center;
-    padding-bottom: 20px;
-    gap: 30px;
-    margin-top: 30px;
-    border-bottom: 1.5px solid #ccc;
-  }
-  &__wrap-icon {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
   }
 }

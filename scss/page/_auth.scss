@@ -1,7 +1,6 @@
 @use "../abstracts";
 .auth {
-  background: #fff;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   &__content,
   &__intro {
@@ -11,12 +10,11 @@
   .flex-template {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
   &__intro {
-    background: var(--auth-intro-bg);
     position: relative;
-    justify-content: center;
     @extend .flex-template;
     &--text {
       margin-top: 49px;
@@ -25,7 +23,6 @@
       font-weight: 500;
       line-height: 144.444%;
       max-width: 412px;
-      color: var(--auth-intro-text-color);
     }
     &-arrow,
     &-logo {
@@ -41,8 +38,11 @@
     }
   }
   &__img {
-    width: var(--width);
-    max-width: 100%;
+    max-width: 422px;
+    object-fit: cover;
+    @include abstracts.screen(md) {
+      max-width: 322px;
+    }
   }
   &__content {
     background: var(--auth-content-bg);
@@ -53,9 +53,6 @@
       translate: 100%;
       transition: translate 0.3s;
       overflow-y: auto;
-      &-signin {
-        translate: 0;
-      }
       &.show {
         translate: 0;
       }
@@ -63,7 +60,7 @@
 
     &-inner {
       @extend .flex-template;
-      padding: 50px 0;
+      height: 100%;
       text-align: center;
       width: min(460px, 100%);
       margin: 0 auto;
@@ -74,7 +71,6 @@
     font-size: 3rem;
     font-weight: 500;
     line-height: 146.667%;
-    color: var(--auth-heading-color);
   }
   &__link {
     color: #0071dc;
@@ -85,7 +81,7 @@
   &__desc {
     @extend .auth__link;
     margin-top: 10px;
-    padding: 0 20px;
+    padding: 0 30px;
     color: var(--auth-desc-color);
   }
   &__form {
