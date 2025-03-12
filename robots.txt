@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://datxe247.pro.vn/sitemap.xml
+Sitemap: https://datxetructuyen.click/sitemap.xml
